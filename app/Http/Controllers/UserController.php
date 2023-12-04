@@ -11,7 +11,16 @@ class UserController extends Controller
      */
     public function index()
     {
-        return "ini adalah isi dari methodnya";
+        //parsing data atau ngirim data dari controller ke views
+        $nama = "Ayu Yuliana";
+        $titles = ["staff", "kasir", "OB"];
+        $usia = 20;
+        $data = [
+            "myName" => $nama,
+            "usia" => $usia,
+            "titles" => $titles
+        ];
+        return view('user.index', $data);
     }
 
     /**
